@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+
+    dependencies {
+        classpath 'gradle.plugin.com.github.maiflai:gradle-scalatest:0.14'
+    }
+}
+
+apply plugin: 'scala'
+apply plugin: 'com.github.maiflai.scalatest'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+    testCompile 'org.scalatest:scalatest_2.11:3.0.0'
+    testRuntime 'org.pegdown:pegdown:1.6.0'
+}
